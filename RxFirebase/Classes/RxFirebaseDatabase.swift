@@ -41,7 +41,7 @@ extension FIRDatabaseReference {
                     observer.onError(error)
                     return
                 } else {
-                    observer.onNext(databaseReference as! FIRDatabaseReference)
+                    observer.onNext(databaseReference)
                     observer.onCompleted()
                 }
             })
