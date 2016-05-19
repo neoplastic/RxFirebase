@@ -28,7 +28,7 @@ Compatable with the new Firebase frameworks
   s.license          = 'MIT'
   s.author           = { "David Wong" => "neoplastic@gmail.com" }
   s.source           = { :git => "https://github.com/neoplastic/RxFirebase.git", :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  # s.social_media_url = 'https://twitter.com/danvari'
 
   s.ios.deployment_target = '8.0'
 
