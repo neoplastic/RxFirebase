@@ -1,33 +1,13 @@
-<<<<<<< HEAD
-# RxFirebase
+# RxFirebase 
 
-[![CI Status](http://img.shields.io/travis/David Wong/RxFirebase.svg?style=flat)](https://travis-ci.org/David Wong/RxFirebase)
-[![Version](https://img.shields.io/cocoapods/v/RxFirebase.svg?style=flat)](http://cocoapods.org/pods/RxFirebase)
-[![License](https://img.shields.io/cocoapods/l/RxFirebase.svg?style=flat)](http://cocoapods.org/pods/RxFirebase)
-[![Platform](https://img.shields.io/cocoapods/p/RxFirebase.svg?style=flat)](http://cocoapods.org/pods/RxFirebase)
+The goal is to cover the new Firebase SDK in rx-ifying goodness! Feel free to contribute, I'll be going through the docs and trying to extend most things.
 
-## Example
+###Currently implemented:
+- Authentication
+- Database
+- Storage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
-## Installation
-
-RxFirebase is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
-
-```ruby
-pod "RxFirebase"
-```
-
-## Author
-
-David Wong, neoplastic@gmail.com
-
-## License
-
-RxFirebase is available under the MIT license. See the LICENSE file for more info.
-=======
-# RxFirebase
->>>>>>> 7abec0c3d0e06e9543c88733a5bce615292552b8
+###To do:
+- Messaging & Notifications
+- Remote Config
+- Documentation
