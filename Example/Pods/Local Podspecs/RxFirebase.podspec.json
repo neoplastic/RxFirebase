@@ -1,0 +1,51 @@
+{
+  "name": "RxFirebase",
+  "version": "0.1.0",
+  "summary": "Make Firebase reactive.",
+  "description": "Make Firebase reactive.\n\nCompatable with the new Firebase frameworks",
+  "homepage": "https://github.com/neoplastic/RxFirebase",
+  "license": "MIT",
+  "authors": {
+    "David Wong": "neoplastic@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/neoplastic/RxFirebase.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "RxFirebase/Classes/**/*",
+  "ios": {
+    "dependencies": {
+      "Firebase": [
+        "~> 3.2.0"
+      ],
+      "Firebase/Auth": [
+
+      ],
+      "Firebase/Database": [
+
+      ],
+      "Firebase/Messaging": [
+
+      ],
+      "Firebase/Storage": [
+
+      ],
+      "RxOptional": [
+        "~> 2.0.0"
+      ]
+    }
+  },
+  "dependencies": {
+    "RxSwift": [
+      "~> 2.5.0"
+    ]
+  },
+  "pod_target_xcconfig": {
+    "ENABLE_BITCODE": "NO",
+    "FRAMEWORK_SEARCH_PATHS": "$(inherited) $(PODS_ROOT)/**",
+    "OTHER_LDFLAGS": "$(inherited) -undefined dynamic_lookup"
+  }
+}
