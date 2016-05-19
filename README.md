@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # RxFirebase
 
 [![CI Status](http://img.shields.io/travis/David Wong/RxFirebase.svg?style=flat)](https://travis-ci.org/David Wong/RxFirebase)
@@ -27,3 +28,6 @@ David Wong, neoplastic@gmail.com
 ## License
 
 RxFirebase is available under the MIT license. See the LICENSE file for more info.
+=======
+# RxFirebase
+>>>>>>> 7abec0c3d0e06e9543c88733a5bce615292552b8
