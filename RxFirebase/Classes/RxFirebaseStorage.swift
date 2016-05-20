@@ -8,7 +8,6 @@
 
 import FirebaseStorage
 import RxSwift
-import RxOptional
 
 extension FIRStorageReference {
     // MARK: UPLOAD

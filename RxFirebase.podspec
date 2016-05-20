@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "RxFirebase"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "Make Firebase reactive."
 
 # This description is used to generate tags and improve search results.
@@ -39,7 +39,7 @@ Compatable with the new Firebase frameworks
   s.ios.dependency 'Firebase/Database'
   s.ios.dependency 'Firebase/Messaging'
   s.ios.dependency 'Firebase/Storage'
-  s.ios.dependency 'RxOptional', '~> 2.0.0'
+  s.ios.dependency 'Firebase/RemoteConfig'
   s.dependency 'RxSwift', '~> 2.5.0'
 
   s.pod_target_xcconfig = {
