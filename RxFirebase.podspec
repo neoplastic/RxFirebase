@@ -37,7 +37,6 @@ Compatable with the new Firebase frameworks
   s.ios.dependency 'Firebase', '~> 3.2.0'
   s.ios.dependency 'Firebase/Auth'
   s.ios.dependency 'Firebase/Database'
-  s.ios.dependency 'Firebase/Messaging'
   s.ios.dependency 'Firebase/Storage'
   s.ios.dependency 'Firebase/RemoteConfig'
   s.dependency 'RxSwift', '~> 2.5.0'
