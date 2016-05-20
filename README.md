@@ -6,7 +6,8 @@ The goal is to cover the new Firebase SDK in rx-ifying goodness! Feel free to co
 - Authentication
 - Database
 - Storage
+- Remote Config
 
 ###To do:
-- Remote Config
-- Documentation
+
+- Create an example app
