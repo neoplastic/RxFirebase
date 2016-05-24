@@ -9,7 +9,7 @@
 import FirebaseDatabase
 import RxSwift
 
-extension FIRDatabaseQuery {
+public extension FIRDatabaseQuery {
     /**
      Listen for data changes at a particular location.
      This is the primary way to read data from the Firebase Database. The observers 
@@ -80,7 +80,7 @@ extension FIRDatabaseQuery {
     }
 }
 
-extension FIRDatabaseReference {
+public extension FIRDatabaseReference {
     /**
      Update changes the values at the specified paths in the dictionary without 
      overwriting other keys at this location
@@ -290,4 +290,50 @@ extension FIRDatabaseReference {
             return NopDisposable.instance
         }
     }
+}
+
+
+public extension ObservableType where E : FIRDataSnapshot {
+    
+    func rx_filterWhenNSNull() -> Observable<E> {
+        return self.filter { (snapshot) -> Bool in
+            return snapshot.value is NSNull
+        }
+    }
+    
+    func rx_filterWhenNotNSNull() -> Observable<E> {
+        return self.filter { (snapshot) -> Bool in
+            return !(snapshot.value is NSNull)
+        }
+    }
+    
+    func rx_children() -> Observable<FIRDataSnapshot> {
+        return self.flatMap({ (snapshot) -> Observable<FIRDataSnapshot> in
+            return Observable.create { observer in
+                
+                for snapChild in snapshot.children {
+                    if let snapChild = snapChild as? FIRDataSnapshot {
+                        observer.onNext(snapChild)
+                    }
+                }
+                observer.onCompleted()
+                
+                return NopDisposable.instance
+            }
+        })
+    }
+    
+    func rx_childrenAsArray() -> Observable<[FIRDataSnapshot]> {
+        return self.flatMap({ (snapshot) -> Observable<[FIRDataSnapshot]> in
+            return Observable.create { observer in
+                if let array = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                    observer.onNext(array)
+                }
+                observer.onCompleted()
+                
+                return NopDisposable.instance
+            }
+        })
+    }
+    
 }

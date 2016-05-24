@@ -9,7 +9,7 @@
 import FirebaseRemoteConfig
 import RxSwift
 
-extension FIRRemoteConfig {
+public extension FIRRemoteConfig {
     /**
      Fetches Remote Config data and sets a duration that specifies how long config data lasts.
      

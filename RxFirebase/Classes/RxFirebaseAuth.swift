@@ -22,7 +22,6 @@ public extension FIRAuth {
             return Observable.create { observer in
                 let listener = self.addAuthStateDidChangeListener({ (auth, user) in
                     observer.onNext((auth, user))
-                    observer.onCompleted()
                 })
                 return AnonymousDisposable {
                     self.removeAuthStateDidChangeListener(listener)
